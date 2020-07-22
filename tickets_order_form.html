@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Party Tickets Order Form</title>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<!-- header starts -->
+		<header>
+			<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+			<div id="line-1">The Halloween Store</div>
+			<div id="line-2">For the little Goblin in all of us!</div>
+		</header>
+		
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about_us.html">About Us</a>
+					<ul>						
+						<li><a href="our_history.html">Our History</a></li>
+						<li><a href="our_team.html">Our Team</a></li>
+					</ul>
+				</li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html" class="current">Party Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content starts -->
+		<main>
+			<!-- sidebar starts -->
+			<aside>
+				<ul>
+					<li><a href="products/props.html">Props</a></li>
+					<li><a href="products/costumes.html">Costumes</a></li>
+					<li><a href="products/special.html">Special FX</a></li>
+					<li><a href="products/masks.html">Masks</a></li>
+				</ul>
+			</aside>
+
+			<!-- the main section of the content starts -->
+			<section>
+				<h1>Buy Tickets for a Halloween Party</h1>
+				
+				<!-- the order form starts -->
+				
+			<form action="place_order.html" name="order_form" method="post">
+			<fieldset>
+			<legend>Member Information</legend>
+				
+				<label for="order_form">E-Mail:</label>
+				<input type="email" name="order_form" autofocus required> <br>
+				
+				<label for="order_form">First Name:</label> 
+				<input type="text" name="order_form" required> <br>
+				
+				<label for="order_form">Last Name:</label> 
+				<input type="text" name="order_form" required> <br>
+				
+				<label for="order_form">Address:</label>
+				<input type="text" name="order_form"> <br>
+				
+				<label for="order_form">City:</label>
+				<input type="text" name="order_form" required> <br>
+				
+				<label for="order_form">Province:</label>
+				<span title="Must be a 2-letter code"><input type="text" name="order_form" required placeholder="2-character code" pattern="[A-z]{2}"></span> <br>
+				
+				<label for="order_form">Postal Code:</label>
+				<span title="Must be 6 alphanumeric characters"><input type="text" name="order_form" required placeholder="6 characters" maxlength="6"></span> <br>
+				
+				<label for="order_form">Phone Number:</label>
+				<span title="Must be in 'xxx-xxx-xxxx' format (dashes should be typed manualy"><input type="tel" name="order_form" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999"></span>
+			
+			</fieldset> <br> 
+			
+			<fieldset>
+			<legend>Ordering Information</legend>
+				
+				<label for="party">Party:</label>
+				<select name="party">
+					<option value="fang-tastic_feast">Fang-Tastic Feast</option>
+					<option value="fright_night">Fright Night</option>
+					<option value="ghouls_night_out">Ghouls' Night Out</option>
+					<option value="monster_mash">Monster Mash</option>
+				</select>
+				
+				<br>
+				
+				<label for="order_type">Order Type:</label>
+				<select name="order_type">
+					<option value="member_package">Member Package</option>
+					<option value="mastercard">Donor Package</option>
+					<option value="single_tickets">Single Tickets</option>
+				</select> <br>
+				
+				<label for="order_form">Number of Tickets:</label>
+				<span title="Must be a number"><input type="number" name="order_form" placeholder="Number of single tickets"></span>
+			
+			</fieldset>
+			
+				<br>
+				
+			<fieldset name='peyment_method'>
+				<legend>Payment Method</legend>
+				<label style="float: none"><input type="radio" name="payment_method" id="payment_method1" value="bill_me"> Bill Me </label>
+				<label style="float: none"><input type="radio" name="payment_method" id="payment_method2" value="credit_card"> Credit Card </label>
+			</fieldset>
+				
+				<br>
+				
+			<fieldset>
+			<legend>Credit Card Information</legend>
+				
+				<label for="card_type">Card Type:</label>
+				<select name="card_type">
+					<option value="visa">Visa</option>
+					<option value="mastercard">MasterCard</option>
+					<option value="discover">Discover</option>
+				</select>	<br>
+				
+				<label for="order_form">Card Number:</label>
+				<span title="Must be a 16-digit entry"><input type="text" name="order_form" required placeholder="16 digits" minlength="16" maxlength="16"></span> <br>
+				
+				<label for="month">Expiration Date:</label>
+				<select name="month" >
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+				
+				<select name="year"">
+                    <option value="15"> 2015</option>
+                    <option value="16"> 2016</option>
+                    <option value="17"> 2017</option>
+                    <option value="18"> 2018</option>
+                    <option value="19"> 2019</option>
+               </select>
+
+			</fieldset>
+			
+			<br>
+			
+			<fieldset>
+			<legend>Submit Your Order</legend>
+				<input type="reset" name="reset_form" value="Reset Fields">		
+				<input type="submit" name="submit" value="Submit">
+			</fieldset>
+			
+			</form>
+				
+			</section>
+		</main>
+
+		<!-- footer starts -->
+		<footer>
+			<p>&copy; 2020 Denys Yashan</p>
+		</footer>
+	</body>
+</html>
